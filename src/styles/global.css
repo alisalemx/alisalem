@@ -39,7 +39,8 @@
   h2,
   h3,
   p,
-  ol {
+  ol,
+  ul {
     margin-top: 0;
   }
 
@@ -110,34 +111,48 @@
     transition: color 180ms ease;
   }
 
-  .gradient-link::after {
-    position: absolute;
-    inset: 0;
+  .gradient-link:hover,
+  .gradient-link:focus-visible {
     background: linear-gradient(45deg, #ff2d55 0%, #ff8a00 45%, #c43cff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    content: attr(data-label);
-    opacity: 0;
-    transition: opacity 180ms ease;
-  }
-
-  .gradient-link:hover,
-  .gradient-link:focus-visible {
-    color: transparent;
-  }
-
-  .gradient-link:hover::after,
-  .gradient-link:focus-visible::after {
-    opacity: 1;
   }
 
   .prose-content p {
     margin-bottom: 1rem;
   }
 
+  .prose-content a,
+  li p a {
+    text-decoration-line: underline;
+  }
+
+  .prose-content a:hover,
+  .prose-content a:focus-visible,
+  li p a:hover,
+  li p a:focus-visible {
+    animation: rainbow-link 1.8s ease infinite;
+    background: linear-gradient(90deg, #ff2d55 0%, #ff8a00 35%, #c43cff 70%, #ff2d55 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes rainbow-link {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 220% 50%;
+    }
+  }
+
   .prose-content p:last-child,
   li p:last-child {
     margin-bottom: 0;
   }
+
 }
