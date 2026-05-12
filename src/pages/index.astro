@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Content, frontmatter } from "../content/profile.md";
+import { frontmatter } from "../content/profile.md";
 import envelopeIcon from "@phosphor-icons/core/regular/envelope-simple.svg?raw";
 import githubIcon from "@phosphor-icons/core/regular/github-logo.svg?raw";
 import linkedinIcon from "@phosphor-icons/core/regular/linkedin-logo.svg?raw";
@@ -62,13 +62,6 @@ const withIconGradient = (svg, id) =>
         }
       </nav>
     </header>
-
-    <section class="py-10 md:py-12" aria-labelledby="about-title">
-      <h2 id="about-title" class="mb-6 font-serif text-[2.4rem] leading-tight text-ink md:text-[3rem]">About</h2>
-      <div class="prose-content max-w-[38rem]">
-        <Content />
-      </div>
-    </section>
 
     <section class="py-10 md:py-12" aria-labelledby="experience-title">
       <h2 id="experience-title" class="mb-8 font-serif text-[2.4rem] leading-tight text-ink md:text-[3rem]">Experience</h2>
