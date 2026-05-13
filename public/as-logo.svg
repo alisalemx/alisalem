@@ -5,9 +5,9 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="oklch(65% 0.238 17.9)"/>
-            <stop offset="45%" stop-color="oklch(74.7% 0.18 57.4)"/>
-            <stop offset="100%" stop-color="oklch(64.1% 0.275 312.9)"/>
+            <stop offset="0%" stop-color="oklch(64.1% 0.275 312.9)"/>
+            <stop offset="45%" stop-color="oklch(65% 0.238 17.9)"/>
+            <stop offset="100%" stop-color="oklch(74.7% 0.18 57.4)"/>
         </linearGradient>
     </defs>
     <g id="Symbols" fill-rule="evenodd">

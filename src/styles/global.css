@@ -15,42 +15,42 @@
 
 @property --gradient-color-1 {
   syntax: '<color>';
-  initial-value: oklch(65% 0.238 17.9);
+  initial-value: oklch(64.1% 0.275 312.9);
   inherits: false;
 }
 
 @property --gradient-color-2 {
   syntax: '<color>';
-  initial-value: oklch(74.7% 0.18 57.4);
+  initial-value: oklch(65% 0.238 17.9);
   inherits: false;
 }
 
 @property --gradient-color-3 {
   syntax: '<color>';
-  initial-value: oklch(64.1% 0.275 312.9);
+  initial-value: oklch(74.7% 0.18 57.4);
   inherits: false;
 }
 
 @keyframes gradient-cycle {
   0% {
-    --gradient-color-1: oklch(65% 0.238 17.9);
-    --gradient-color-2: oklch(74.7% 0.18 57.4);
-    --gradient-color-3: oklch(64.1% 0.275 312.9);
-  }
-  33.33% {
-    --gradient-color-1: oklch(74.7% 0.18 57.4);
-    --gradient-color-2: oklch(64.1% 0.275 312.9);
-    --gradient-color-3: oklch(65% 0.238 17.9);
-  }
-  66.66% {
     --gradient-color-1: oklch(64.1% 0.275 312.9);
     --gradient-color-2: oklch(65% 0.238 17.9);
     --gradient-color-3: oklch(74.7% 0.18 57.4);
   }
-  100% {
+  33.33% {
     --gradient-color-1: oklch(65% 0.238 17.9);
     --gradient-color-2: oklch(74.7% 0.18 57.4);
     --gradient-color-3: oklch(64.1% 0.275 312.9);
+  }
+  66.66% {
+    --gradient-color-1: oklch(74.7% 0.18 57.4);
+    --gradient-color-2: oklch(64.1% 0.275 312.9);
+    --gradient-color-3: oklch(65% 0.238 17.9);
+  }
+  100% {
+    --gradient-color-1: oklch(64.1% 0.275 312.9);
+    --gradient-color-2: oklch(65% 0.238 17.9);
+    --gradient-color-3: oklch(74.7% 0.18 57.4);
   }
 }
 
