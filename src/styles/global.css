@@ -8,7 +8,6 @@
   --color-muted: oklch(52.5% 0.01 84.6);
   --color-rule: oklch(87.1% 0.015 84.5);
   --color-accent: oklch(56.9% 0.234 29.2);
-  --color-border: oklch(93.7% 0.007 88.6);
   --transition-duration: 200ms;
   --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -73,7 +72,6 @@
     min-height: 100vh;
     margin: 0;
     padding: 24px;
-    border: 16px solid var(--color-border);
     background: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -81,13 +79,13 @@
     font-weight: 350;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    transition: background-color var(--transition-duration) var(--transition-ease), border-color var(--transition-duration) var(--transition-ease);
+    transition: background-color var(--transition-duration) var(--transition-ease);
   }
 
   @media (min-width: 768px) {
     body {
       padding: 48px;
-      border-width: 20px;
+      font-size: 17px;
     }
   }
 
@@ -126,12 +124,6 @@
     outline: none;
   }
 
-  @media (min-width: 768px) {
-    body {
-      font-size: 17px;
-    }
-  }
-
   @media (prefers-color-scheme: dark) {
     :root {
       color-scheme: dark;
@@ -140,7 +132,6 @@
       --color-muted: oklch(56.4% 0.018 86.4);
       --color-rule: oklch(28.7% 0.015 84.5);
       --color-accent: oklch(66.4% 0.223 25.7);
-      --color-border: oklch(31.8% 0.014 89.9);
     }
   }
 }
