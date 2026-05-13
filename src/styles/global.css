@@ -25,7 +25,10 @@
 
   body {
     min-width: 320px;
+    min-height: 100vh;
     margin: 0;
+    padding: 24px;
+    border: 16px solid #eceae5;
     background: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -33,6 +36,13 @@
     font-weight: 350;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding: 48px;
+      border-width: 24px;
+    }
   }
 
   h1,
