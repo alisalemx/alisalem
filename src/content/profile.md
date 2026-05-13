@@ -25,7 +25,7 @@ roles:
     period: Jan 2023-Aug 2025
     location: Toronto, ON
     description: I led Quantum Design System work across visual foundations, theming, localization, and developer-facing tooling. I established planning practices, introduced a contribution model, and helped guide an AI-powered chat assistant for contextual product support.
-  - company: RBC Royal Bank
+  - company: Royal Bank of Canada
     url: https://www.rbcroyalbank.com
     role: Visual Design Lead, RIG Design System
     period: Dec 2019-Dec 2022
