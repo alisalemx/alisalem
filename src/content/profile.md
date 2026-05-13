@@ -19,7 +19,7 @@ roles:
     location: Toronto, ON
     description: >-
       League is a digital healthcare consumer experience platform powered by AI. I lead Genesis Design System for League's platform, including its server-driven UI framework. My work shapes the product experience through AI-driven design workflows that use our design system as the foundation for exploration, alignment, and delivery across design, product, and engineering.
-  - company: Auth0
+  - company: Auth0 (Acq. Okta)
     url: https://auth0.com
     role: Design Systems Lead
     period: Jan 2023-Aug 2025
