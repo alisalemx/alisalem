@@ -8,6 +8,9 @@
   --color-muted: #6d6a64;
   --color-rule: #d9d4ca;
   --color-accent: #e00000;
+  --color-border: #eceae5;
+  --transition-duration: 200ms;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @layer base {
@@ -21,6 +24,7 @@
 
   html {
     background: var(--color-paper);
+    transition: background-color var(--transition-duration) var(--transition-ease);
   }
 
   body {
@@ -28,7 +32,7 @@
     min-height: 100vh;
     margin: 0;
     padding: 24px;
-    border: 16px solid #eceae5;
+    border: 16px solid var(--color-border);
     background: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -36,6 +40,7 @@
     font-weight: 350;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
+    transition: background-color var(--transition-duration) var(--transition-ease), border-color var(--transition-duration) var(--transition-ease);
   }
 
   @media (min-width: 768px) {
@@ -85,6 +90,18 @@
       font-size: 17px;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --color-paper: #1a1814;
+      --color-ink: #c4bfb4;
+      --color-muted: #7a756a;
+      --color-rule: #2e2a22;
+      --color-accent: #ff4444;
+      --color-border: #35322a;
+    }
+  }
 }
 
 @layer components {
@@ -109,7 +126,7 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 180ms ease;
+    transition: opacity var(--transition-duration) var(--transition-ease);
   }
 
   .contact-icon-base {
@@ -136,7 +153,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: var(--color-ink);
-    transition: color 180ms ease;
+    transition: color var(--transition-duration) var(--transition-ease);
   }
 
   .gradient-link:hover,
