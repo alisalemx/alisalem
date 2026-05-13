@@ -10,7 +10,7 @@ links:
   - label: X
     href: https://x.com/alisalem
   - label: Email
-    href: mailto:hello@alisalem.ca
+    href: mailto:as@alisalem.ca
 roles:
   - company: League
     url: https://league.com
