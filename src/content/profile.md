@@ -2,6 +2,7 @@
 name: Ali Salem
 title: Product design and design systems leader
 summary: "A design systems leader shaping product experiences with AI-driven workflows, scalable systems, and thoughtful craft."
+seoDescription: "Ali Salem is a product design and design systems leader shaping product experiences through AI-driven workflows, scalable systems, and thoughtful craft."
 links:
   - label: LinkedIn
     href: https://www.linkedin.com/in/alixsalem/

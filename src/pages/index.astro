@@ -6,7 +6,7 @@ import githubIcon from "@phosphor-icons/core/regular/github-logo.svg?raw";
 import linkedinIcon from "@phosphor-icons/core/regular/linkedin-logo.svg?raw";
 import xIcon from "@phosphor-icons/core/regular/x-logo.svg?raw";
 
-const { name, title, summary, links, roles } = frontmatter;
+const { name, title, summary, seoDescription, links, roles } = frontmatter;
 const pageTitle = `${name} - ${title}`;
 const iconByLabel = {
   GitHub: githubIcon,
@@ -23,7 +23,7 @@ const withIconGradient = (svg, id) =>
     .replace('fill="currentColor"', `fill="url(#${id})"`);
 ---
 
-<BaseLayout title={pageTitle} description={summary}>
+<BaseLayout title={pageTitle} description={seoDescription ?? summary}>
   <main class="mx-auto w-full max-w-[42.5rem] px-4 py-10 md:px-8 md:py-16">
     <header class="flex min-h-[38vh] flex-col justify-center pb-6 pt-2 md:min-h-[46vh] md:pb-10 md:pt-4" aria-labelledby="intro-title">
       <a class="home-logo-link mb-9 block h-10 w-10 text-ink md:mb-14" href="/" aria-label="Ali Salem home">
