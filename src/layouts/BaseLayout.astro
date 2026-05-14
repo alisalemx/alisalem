@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const canonicalUrl = new URL("/", Astro.site);
+const socialImageUrl = new URL("/og-image.png", Astro.site);
 ---
 
 <!doctype html>
@@ -18,9 +20,17 @@ const { title, description } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.site} />
-    <meta name="twitter:card" content="summary" />
-    <link rel="canonical" href={Astro.site} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Ali Salem" />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ali Salem AS logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content="Ali Salem AS logo" />
+    <meta name="theme-color" content="#f7f5f1" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,6 +38,10 @@ const { title, description } = Astro.props;
       rel="stylesheet"
     />
     <link rel="icon" href="/as-logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
   </head>
   <body>
