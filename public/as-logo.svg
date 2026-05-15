@@ -7,8 +7,7 @@
       <stop offset="100%" stop-color="#ff8a00" />
     </linearGradient>
   </defs>
-  <rect width="512" height="512" fill="#f7f5f1" />
-  <g transform="translate(72 72) scale(10.8235294118)" fill-rule="evenodd">
+  <g transform="scale(15.0588235294)" fill-rule="evenodd">
     <path fill="url(#logo-gradient)" d="M34,0 L34,34 L0,34 L0,0 L34,0 Z M19.4754653,6 L14.4686971,6 L6,28 L11.7884941,28 L13.2402707,23.4972527 L20.7038917,23.4972527 L22.1556684,28 L28,28 L19.4754653,6 Z" />
   </g>
 </svg>
