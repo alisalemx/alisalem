@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
-    <title>Rectangle</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="oklch(64.1% 0.275 312.9)"/>
-            <stop offset="45%" stop-color="oklch(65% 0.238 17.9)"/>
-            <stop offset="100%" stop-color="oklch(74.7% 0.18 57.4)"/>
-        </linearGradient>
-    </defs>
-    <g id="Symbols" fill-rule="evenodd">
-        <path fill="url(#logo-gradient)" d="M34,0 L34,34 L0,34 L0,0 L34,0 Z M19.4754653,6 L14.4686971,6 L6,28 L11.7884941,28 L13.2402707,23.4972527 L20.7038917,23.4972527 L22.1556684,28 L28,28 L19.4754653,6 Z"></path>
-    </g>
+<svg width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Ali Salem AS logo" xmlns="http://www.w3.org/2000/svg">
+  <title>Ali Salem AS logo</title>
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c43cff" />
+      <stop offset="45%" stop-color="#ff2e55" />
+      <stop offset="100%" stop-color="#ff8a00" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#f7f5f1" />
+  <g transform="translate(72 72) scale(10.8235294118)" fill-rule="evenodd">
+    <path fill="url(#logo-gradient)" d="M34,0 L34,34 L0,34 L0,0 L34,0 Z M19.4754653,6 L14.4686971,6 L6,28 L11.7884941,28 L13.2402707,23.4972527 L20.7038917,23.4972527 L22.1556684,28 L28,28 L19.4754653,6 Z" />
+  </g>
 </svg>
