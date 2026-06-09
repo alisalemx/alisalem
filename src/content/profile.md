@@ -10,8 +10,6 @@ links:
     href: https://github.com/alisalemx
   - label: X
     href: https://x.com/alisalem
-  - label: Email
-    href: mailto:as@alisalem.ca
 roles:
   - company: League
     url: https://league.com
