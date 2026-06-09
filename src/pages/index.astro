@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { frontmatter } from "../content/profile.md";
-import envelopeIcon from "@phosphor-icons/core/regular/envelope-simple.svg?raw";
+// import envelopeIcon from "@phosphor-icons/core/regular/envelope-simple.svg?raw";
 import githubIcon from "@phosphor-icons/core/regular/github-logo.svg?raw";
 import linkedinIcon from "@phosphor-icons/core/regular/linkedin-logo.svg?raw";
 import xIcon from "@phosphor-icons/core/regular/x-logo.svg?raw";
@@ -12,8 +12,8 @@ const iconByLabel = {
   GitHub: githubIcon,
   Twitter: xIcon,
   X: xIcon,
-  LinkedIn: linkedinIcon,
-  Email: envelopeIcon
+  LinkedIn: linkedinIcon
+  // Email: envelopeIcon
 };
 
 const withIconClass = (svg, className) => svg.replace("<svg ", `<svg class="${className}" aria-hidden="true" focusable="false" `);
