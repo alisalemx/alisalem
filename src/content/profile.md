@@ -1,8 +1,8 @@
 ---
 name: Ali Salem
 title: Product design and design systems leader
-summary: "A design systems leader shaping product experiences at scale through AI-driven workflows and thoughtful craft."
-seoDescription: "Ali Salem is a product design and design systems leader shaping product experiences at scale through AI-driven workflows and thoughtful craft."
+summary: "A design systems leader with a Master of Design in Strategic Foresight & Innovation, shaping product experiences at scale through AI-driven workflows and thoughtful craft."
+seoDescription: "Ali Salem is a product design and design systems leader with a Master of Design (MDes) in Strategic Foresight & Innovation from OCAD University, shaping product experiences at scale through AI-driven workflows and thoughtful craft."
 links:
   - label: LinkedIn
     href: https://www.linkedin.com/in/alixsalem/
@@ -77,4 +77,12 @@ roles:
     period: 2006-2012
     location: Cairo, Egypt
     description: I began designing while in university, working with local and international clients and later contributing to Cairo's growing startup community in 2011.
+education:
+  - institution: OCAD University
+    url: https://www.ocadu.ca
+    degree: Master of Design (MDes), Strategic Foresight & Innovation
+    period: Sep 2020-Jan 2024
+    location: Toronto, ON
+    descriptionHtml: >-
+      Focused on systems thinking and innovation strategy. My <a class="gradient-link" href="https://openresearch.ocadu.ca/id/eprint/4188/" target="_blank" rel="noreferrer" data-label="thesis">thesis</a>, <em>Component Constellations</em>, explored the future of design systems through foresight and systems mapping.
 ---

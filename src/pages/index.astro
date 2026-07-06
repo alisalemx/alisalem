@@ -6,7 +6,7 @@ import githubIcon from "@phosphor-icons/core/regular/github-logo.svg?raw";
 import linkedinIcon from "@phosphor-icons/core/regular/linkedin-logo.svg?raw";
 import xIcon from "@phosphor-icons/core/regular/x-logo.svg?raw";
 
-const { name, title, summary, seoDescription, links, roles } = frontmatter;
+const { name, title, summary, seoDescription, links, roles, education } = frontmatter;
 const pageTitle = `${name} - ${title}`;
 const iconByLabel = {
   GitHub: githubIcon,
@@ -86,6 +86,32 @@ const withIconGradient = (svg, id) =>
                   )}
                 </h3>
                 <p class="mb-1 text-balance text-[0.9rem] leading-snug text-muted">{item.role}</p>
+                <p class="mb-2 text-balance text-[0.8rem] leading-snug text-muted">{item.period} · {item.location}</p>
+                {item.descriptionHtml ? <p class="text-balance" set:html={item.descriptionHtml} /> : <p class="text-balance">{item.description}</p>}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="pb-10 pt-6 md:pb-12 md:pt-8" aria-labelledby="education-title">
+      <h2 id="education-title" class="mb-8 text-balance font-serif text-[2.4rem] leading-tight text-ink md:text-[3rem]">Education</h2>
+      <ol class="space-y-9">
+        {
+          education.map((item) => (
+            <li>
+              <div class="max-w-[38rem]">
+                <h3 class="mb-1 text-balance font-serif text-[1.75rem] leading-tight text-ink">
+                  {item.url ? (
+                    <a class="gradient-link" href={item.url} target="_blank" rel="noreferrer" data-label={item.institution}>
+                      {item.institution}
+                    </a>
+                  ) : (
+                    item.institution
+                  )}
+                </h3>
+                <p class="mb-1 text-balance text-[0.9rem] leading-snug text-muted">{item.degree}</p>
                 <p class="mb-2 text-balance text-[0.8rem] leading-snug text-muted">{item.period} · {item.location}</p>
                 {item.descriptionHtml ? <p class="text-balance" set:html={item.descriptionHtml} /> : <p class="text-balance">{item.description}</p>}
               </div>
