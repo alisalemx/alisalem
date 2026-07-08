@@ -10,7 +10,7 @@ Commit and push changes directly to `main`. Do not create feature branches or pu
 
 ## Tech stack
 
-- **Astro** `^6.3.1` (static build, no SSR)
+- **Astro** `^7.0.7` (static build, no SSR)
 - **Tailwind CSS** `^4.3.0` via `@tailwindcss/vite` — no `tailwind.config.js`; config lives in `src/styles/global.css` using `@theme` and `@layer`
 - **TypeScript** strict (`astro/tsconfigs/strict`)
 - **@phosphor-icons/core** for SVG icons
