@@ -4,6 +4,10 @@ Guidance for Claude Code when working in this repository.
 
 Single-page Astro static site for [alisalem.ca](https://alisalem.ca), deployed to Cloudflare Pages.
 
+## Workflow
+
+Commit and push changes directly to `main`. Do not create feature branches or pull requests.
+
 ## Tech stack
 
 - **Astro** `^6.3.1` (static build, no SSR)
