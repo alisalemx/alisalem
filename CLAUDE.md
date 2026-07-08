@@ -25,6 +25,11 @@ npm run preview  # Preview production build locally
 
 No test, lint, or format scripts exist. Do not add them unless requested. Use `npm run build` as the main verification step.
 
+## Dependencies
+
+- Keep dependencies patched with `npm audit fix` (non-breaking updates only). Run `npm run build` afterward to verify, then commit the lockfile.
+- Avoid `npm audit fix --force`, which can pull breaking major upgrades. Handle major version bumps (e.g. an Astro major) deliberately as their own task with a full build and visual check.
+
 ## Entrypoints and structure
 
 - **`src/pages/index.astro`** — sole page. Imports profile data from `src/content/profile.md` via `frontmatter` export.
