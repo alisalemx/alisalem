@@ -2,39 +2,56 @@
 
 Guidance for Claude Code when working in this repository.
 
-The full project reference — tech stack, structure, patterns, and conventions —
-lives in **AGENTS.md**. Read it first:
+Single-page Astro static site for [alisalem.ca](https://alisalem.ca), deployed to Cloudflare Pages.
 
-@AGENTS.md
+## Tech stack
 
-## Quick reference
+- **Astro** `^6.3.1` (static build, no SSR)
+- **Tailwind CSS** `^4.3.0` via `@tailwindcss/vite` — no `tailwind.config.js`; config lives in `src/styles/global.css` using `@theme` and `@layer`
+- **TypeScript** strict (`astro/tsconfigs/strict`)
+- **@phosphor-icons/core** for SVG icons
 
-Single-page Astro static site for [alisalem.ca](https://alisalem.ca), deployed
-to Cloudflare Pages from `main`.
+## Dev commands
 
 ```sh
-npm run dev      # local dev server
-npm run build    # static build → dist/  (main verification step)
-npm run preview  # preview production build
+npm run dev      # Astro dev server
+npm run build    # Static build → dist/
+npm run preview  # Preview production build locally
 ```
 
-There are **no lint, format, or test scripts** — do not add them unless asked.
-Verify changes with `npm run build`.
+No test, lint, or format scripts exist. Do not add them unless requested. Use `npm run build` as the main verification step.
 
-## Working notes for Claude
+## Entrypoints and structure
 
-- **Content edits go in `src/content/profile.md`**, not in `index.astro`. That
-  file's YAML frontmatter is the single source of truth for name, title,
-  summary, links, and work history. Use `descriptionHtml` (not `description`)
-  only when a role needs inline links; prefer folded scalars (`>-`) for long copy.
-- **Tailwind v4, no config file.** Theme tokens and component classes
-  (`.gradient-link`, `.contact-link`, `.home-logo-link`) live in
-  `src/styles/global.css` via `@theme` and `@layer`. There is no `tailwind.config.js`.
-- **Phosphor icons are raw SVG strings**, imported with `?raw` and modified by
-  string replacement in `.astro` frontmatter — never treated as components.
-- **Keep the page minimal**: intro/contact links plus Experience. Do not
-  reintroduce a standalone About section unless requested.
-- **Link styling**: underlined by default, animated gradient on hover/focus
-  (matching `.gradient-link`) — no flicker.
-- **League framing**: Ali shapes the product experience through AI-driven design
-  workflows that use the design system; do not imply ownership of healthcare workflows.
+- **`src/pages/index.astro`** — sole page. Imports profile data from `src/content/profile.md` via `frontmatter` export.
+- **`src/layouts/BaseLayout.astro`** — root layout. Loads Google Fonts and `src/styles/global.css`.
+- **`src/content/profile.md`** — single source of truth for name, title, summary, links, and work history (YAML frontmatter). `descriptionHtml` keys allow inline HTML.
+- **`src/styles/global.css`** — Tailwind v4 entrypoint. Defines custom theme colors/fonts and component layers (`home-logo-link`, `contact-link`, `gradient-link`).
+- **`public/as-logo.svg`** — favicon and home logo asset.
+
+## Notable patterns
+
+- **SVG icons are imported as raw strings** using the `?raw` query:
+  `import githubIcon from "@phosphor-icons/core/regular/github-logo.svg?raw"`
+- **Icons are manipulated via string replacement** in frontmatter to inject Tailwind classes, SVG gradients, and SMIL animations. Do not treat them as components.
+- **Tailwind v4 syntax**: uses `@import "tailwindcss"`, `@theme { ... }`, and `@layer components { ... }`. No `tailwind.config.js`.
+- **No CI config in repo** — use `npm run build` as the main verification step.
+
+## Deployment
+
+- Deployed as a static Astro site to Cloudflare Pages from the `main` branch.
+- Build command: `npm run build`.
+- Build output directory: `dist/`.
+
+## Content and design conventions
+
+- The current page structure is intentionally minimal: intro/contact links plus Experience. Do not reintroduce a standalone About section unless requested.
+- Put biographical proof points and role context into the relevant `roles` entries in `src/content/profile.md`.
+- For longer YAML frontmatter text, prefer folded scalars (`>-`) so copy edits stay readable and parse safely.
+- Use `descriptionHtml` (not `description`) only when a role needs inline links.
+- Preserve the user's preferred League framing: Ali shapes the product experience through AI-driven design workflows that use the design system; do not imply ownership of healthcare workflows.
+- Keep text links underlined by default. On hover/focus, links should shift to the animated gradient color behavior used by `.gradient-link`, matching the icon hover pattern without flicker.
+
+## Environment
+
+- `baseUrl: "."` in `tsconfig.json` enables absolute imports from repo root.
