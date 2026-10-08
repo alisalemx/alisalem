@@ -58,9 +58,7 @@ No test, lint, or format scripts exist. Do not add them unless requested. Use `n
 - Put biographical proof points and role context into the relevant `roles` entries in `src/content/profile.md`.
 - For longer YAML frontmatter text, prefer folded scalars (`>-`) so copy edits stay readable and parse safely.
 - Use `descriptionHtml` (not `description`) only when a role needs inline links.
-- Content comes from Ali's AliOS knowledge base: titles, employers and dates from the job notes in `work/jobs/`, and wording adapted from the main CV (`work/cv/cv.md`). Write in Canadian English.
-- The intro shows Ali's range across products, teams, and AI, with design systems as one part. Do not frame it as design systems only.
-- League framing: Ali led design for League's design system and built the tooling that taught AI tools to use it; do not imply ownership of healthcare workflows.
+- Preserve the user's preferred League framing: Ali shapes the product experience through AI-driven design workflows that use the design system; do not imply ownership of healthcare workflows.
 - Keep text links underlined by default. On hover/focus, links should shift to the animated gradient color behavior used by `.gradient-link`, matching the icon hover pattern without flicker.
 
 ## Environment

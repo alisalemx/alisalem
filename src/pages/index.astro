@@ -113,7 +113,7 @@ const withIconGradient = (svg, id) =>
                 </h3>
                 <p class="mb-1 text-balance text-[0.9rem] leading-snug text-muted">{item.degree}</p>
                 <p class="mb-2 text-balance text-[0.8rem] leading-snug text-muted">{item.period} · {item.location}</p>
-                {item.descriptionHtml ? <p class="text-balance" set:html={item.descriptionHtml} /> : item.description && <p class="text-balance">{item.description}</p>}
+                {item.descriptionHtml ? <p class="text-balance" set:html={item.descriptionHtml} /> : <p class="text-balance">{item.description}</p>}
               </div>
             </li>
           ))
