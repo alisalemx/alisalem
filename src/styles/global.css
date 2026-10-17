@@ -5,6 +5,7 @@
   --font-serif: "Instrument Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --color-paper: oklch(97.1% 0.006 84.5);
   --color-ink: oklch(19.6% 0 0);
+  --color-body: oklch(27% 0.005 84.5);
   --color-muted: oklch(52.5% 0.01 84.6);
   --color-rule: oklch(64% 0.015 84.5);
   --color-accent: oklch(56.9% 0.234 29.2);
@@ -73,7 +74,7 @@
     margin: 0;
     padding: 20px;
     background: var(--color-paper);
-    color: var(--color-ink);
+    color: var(--color-body);
     font-family: var(--font-sans);
     font-size: 16px;
     font-weight: 350;
@@ -129,6 +130,7 @@
       color-scheme: dark;
       --color-paper: oklch(21% 0.008 84.6);
       --color-ink: oklch(80.6% 0.016 86.4);
+      --color-body: var(--color-ink);
       --color-muted: oklch(61% 0.018 86.4);
       --color-rule: oklch(51% 0.015 84.5);
       --color-accent: oklch(66.4% 0.223 25.7);
@@ -225,7 +227,7 @@
     background: linear-gradient(45deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 45%, var(--gradient-color-3) 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    color: var(--color-ink);
+    color: inherit;
     transition: color var(--transition-duration) var(--transition-ease);
     animation: gradient-cycle 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   }
